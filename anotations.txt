@@ -1,0 +1,175 @@
+Here's the list without bold formatting:
+
+### Core Spring Boot Annotations
+
+1. `@SpringBootApplication`
+   - Combines `@Configuration`, `@EnableAutoConfiguration`, and `@ComponentScan`. It marks the main class of a Spring Boot application and triggers auto-configuration and component scanning.
+
+2. `@EnableAutoConfiguration`
+   - Automatically configures your Spring application based on the dependencies present in the classpath.
+
+3. `@ComponentScan`
+   - Automatically scans for Spring components (like `@Component`, `@Service`, `@Repository`, etc.) in the specified package.
+
+4. `@Configuration`
+   - Marks a class as a source of bean definitions. It’s often used for defining configuration beans.
+
+### Spring MVC Annotations
+
+5. `@RestController`
+   - Combines `@Controller` and `@ResponseBody`. It’s used for RESTful web services, automatically serializing the response to JSON or XML.
+
+6. `@Controller`
+   - Used to define a controller class, typically in MVC applications. It’s mainly used to serve HTML views.
+
+7. `@RequestMapping`
+   - Maps HTTP requests to handler methods of MVC and REST controllers. It can specify HTTP methods, URL patterns, and other parameters.
+
+8. `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`, `@PatchMapping`
+   - Specialized versions of `@RequestMapping` for common HTTP methods. These simplify the mapping of HTTP requests by method.
+
+9. `@PathVariable`
+   - Binds a method parameter to a URI template variable in the request mapping.
+
+10. `@RequestParam`
+    - Binds a method parameter to a query parameter in the request.
+
+11. `@RequestBody`
+    - Binds the body of an HTTP request to a Java object, useful for handling JSON or XML payloads.
+
+12. `@ResponseBody`
+    - Indicates that the return value of a method should be serialized directly into the HTTP response body.
+
+13. `@CrossOrigin`
+    - Enables Cross-Origin Resource Sharing (CORS) for RESTful web services.
+
+### Dependency Injection and Bean Annotations
+
+14. `@Autowired`
+    - Automatically injects dependencies into a bean (field, constructor, or setter).
+
+15. `@Component`
+    - Marks a class as a Spring component, which makes it eligible for component scanning.
+
+16. `@Service`
+    - Indicates that a class provides business logic. It's a specialized form of `@Component`.
+
+17. `@Repository`
+    - Indicates that a class is a Data Access Object (DAO) and is responsible for data access, with added benefits like exception translation.
+
+18. `@Bean`
+    - Defines a method that returns a Spring bean to be managed by the Spring container. Used in `@Configuration` classes.
+
+### Spring Data JPA Annotations
+
+19. `@Entity`
+    - Marks a class as a JPA entity (a table in the database).
+
+20. `@Id`
+    - Specifies the primary key of an entity.
+
+21. `@GeneratedValue`
+    - Specifies the generation strategy for the primary key, such as `AUTO`, `IDENTITY`, `SEQUENCE`, or `TABLE`.
+
+22. `@Column`
+    - Specifies the column mapping for a field in a JPA entity.
+
+23. `@Table`
+    - Specifies the table name and schema for a JPA entity.
+
+24. `@OneToOne`, `@OneToMany`, `@ManyToOne`, `@ManyToMany`
+    - Define relationships between JPA entities (e.g., one-to-one, one-to-many, many-to-one, and many-to-many).
+
+25. `@Query`
+    - Used in Spring Data JPA repositories to define custom JPQL or SQL queries.
+
+### Validation Annotations
+
+26. `@Valid`
+    - Used to indicate that an object should be validated before processing (often used in conjunction with `@RequestBody` or `@ModelAttribute`).
+
+27. `@NotNull`, `@NotEmpty`, `@NotBlank`
+    - Common validation constraints that ensure a field is not null, empty, or blank.
+
+28. `@Size`
+    - Specifies the minimum and maximum size of a collection, array, string, etc.
+
+29. `@Min`, `@Max`
+    - Specifies the minimum and maximum numeric values for a field.
+
+30. `@Pattern`
+    - Specifies a regular expression pattern that a field must match.
+
+### Scheduling Annotations
+
+31. `@EnableScheduling`
+    - Enables Spring's scheduling capabilities.
+
+32. `@Scheduled`
+    - Schedules a method to run at a fixed rate or fixed delay, or by using a cron expression.
+
+### Caching Annotations
+
+33. `@EnableCaching`
+    - Enables Spring's caching support.
+
+34. `@Cacheable`
+    - Indicates that the result of a method should be cached.
+
+35. `@CachePut`
+    - Updates a cache entry without blocking the execution of a method.
+
+36. `@CacheEvict`
+    - Removes entries from a cache.
+
+### Spring Security Annotations
+
+37. `@EnableWebSecurity`
+    - Enables Spring Security's web security support.
+
+38. `@PreAuthorize`, `@PostAuthorize`
+    - Specify security constraints before and after a method executes based on the user’s roles or permissions.
+
+39. `@Secured`
+    - Restricts method access to users with specific roles.
+
+40. `@RolesAllowed`
+    - Specifies roles that are allowed to access a method.
+
+41. `@WithMockUser`
+    - For testing, simulates a user with specific roles in Spring Security test contexts.
+
+### Asynchronous Processing Annotations
+
+42. `@EnableAsync`
+    - Enables asynchronous method execution.
+
+43. `@Async`
+    - Marks a method to be executed asynchronously, typically in a separate thread.
+
+### Conditional Annotations
+
+44. `@ConditionalOnProperty`
+    - Enables or disables a bean based on the presence or value of a property.
+
+45. `@ConditionalOnMissingBean`
+    - Only creates a bean if a specific bean is not already present in the application context.
+
+46. `@ConditionalOnClass`, `@ConditionalOnMissingClass`
+    - Configures beans to be created only if a specific class is or isn’t available on the classpath.
+
+### Test Annotations
+
+47. `@SpringBootTest`
+    - Configures an application context for integration testing.
+
+48. `@RunWith(SpringRunner.class)`
+    - Used in JUnit 4 tests to specify that Spring should be used to run the test.
+
+49. `@MockBean`
+    - Used to add mock objects to the Spring application context.
+
+50. `@DataJpaTest`
+    - Configures an in-memory database, scans for JPA entities, and configures Spring Data JPA repositories for testing.
+
+These annotations cover the main functionalities in Spring Boot, from core application configuration to specific features like caching, scheduling, and security.
