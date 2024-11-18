@@ -1,0 +1,159 @@
+Here is a list of essential Git commands, organized by functionality:
+
+### Basic Commands
+
+1. **`git init`**
+   - Initializes a new Git repository in the current directory.
+
+2. **`git clone <repository-url>`**
+   - Copies an existing repository from a URL (like GitHub) to your local machine.
+
+3. **`git add <file>`**
+   - Stages a specific file for the next commit.
+
+4. **`git add .`**
+   - Stages all modified files for the next commit.
+
+5. **`git commit -m "message"`**
+   - Commits staged changes with a short description message.
+
+6. **`git status`**
+   - Shows the current state of the repository, including staged, unstaged, and untracked files.
+
+7. **`git log`**
+   - Displays a log of all commits made in the repository's history.
+
+### Branching and Merging
+
+8. **`git branch`**
+   - Lists all branches in the repository; highlights the current branch.
+
+9. **`git branch <branch-name>`**
+   - Creates a new branch.
+
+10. **`git checkout <branch-name>`**
+    - Switches to a different branch.
+
+11. **`git checkout -b <branch-name>`**
+    - Creates and switches to a new branch.
+
+12. **`git merge <branch-name>`**
+    - Merges the specified branch into the current branch.
+
+13. **`git branch -d <branch-name>`**
+    - Deletes the specified branch.
+
+### Remote Repositories
+
+14. **`git remote add <name> <url>`**
+    - Adds a remote repository reference (e.g., origin) with the given URL.
+
+15. **`git remote -v`**
+    - Lists all remote repositories and their URLs.
+
+16. **`git fetch <remote-name>`**
+    - Fetches updates from the remote repository without merging them.
+
+17. **`git pull <remote-name> <branch-name>`**
+    - Fetches and merges changes from the remote repository's branch into the current branch.
+
+18. **`git push <remote-name> <branch-name>`**
+    - Pushes changes from the current branch to the specified branch on the remote repository.
+
+19. **`git push -u <remote-name> <branch-name>`**
+    - Sets an upstream branch for the current branch, allowing future pushes with `git push`.
+
+### Viewing and Inspecting
+
+20. **`git diff`**
+    - Shows changes between the working directory and the staging area.
+
+21. **`git diff <branch1> <branch2>`**
+    - Shows differences between two branches.
+
+22. **`git show <commit-hash>`**
+    - Shows detailed information about a specific commit.
+
+23. **`git log --oneline`**
+    - Displays a condensed, one-line-per-commit log history.
+
+24. **`git log --graph --oneline --all`**
+    - Displays a graphical view of the branch structure.
+
+### Undoing Changes
+
+25. **`git checkout -- <file>`**
+    - Reverts changes in the specified file in the working directory.
+
+26. **`git reset <file>`**
+    - Unstages a staged file without affecting the working directory.
+
+27. **`git reset --hard <commit-hash>`**
+    - Resets the current branch to a specific commit, discarding all changes after it.
+
+28. **`git revert <commit-hash>`**
+    - Creates a new commit that undoes the changes of a specific commit.
+
+29. **`git clean -f`**
+    - Removes all untracked files from the working directory.
+
+### Stashing
+
+30. **`git stash`**
+    - Temporarily saves changes without committing them.
+
+31. **`git stash list`**
+    - Lists all stashed changes.
+
+32. **`git stash apply`**
+    - Applies the most recent stash to the working directory without removing it from the stash list.
+
+33. **`git stash pop`**
+    - Applies the most recent stash and removes it from the stash list.
+
+34. **`git stash drop <stash-id>`**
+    - Removes a specific stash from the stash list.
+
+### Tags
+
+35. **`git tag <tag-name>`**
+    - Creates a new tag for the current commit.
+
+36. **`git tag`**
+    - Lists all tags in the repository.
+
+37. **`git tag -d <tag-name>`**
+    - Deletes a specific tag.
+
+38. **`git push <remote-name> <tag-name>`**
+    - Pushes a tag to a remote repository.
+
+### Configuration
+
+39. **`git config --global user.name "Your Name"`**
+    - Sets your Git username (global).
+
+40. **`git config --global user.email "your.email@example.com"`**
+    - Sets your Git email address (global).
+
+41. **`git config --global core.editor <editor>`**
+    - Sets the default editor for Git (like `vim`, `nano`, or `code`).
+
+42. **`git config --list`**
+    - Lists all current configuration settings.
+
+### Advanced Commands
+
+43. **`git cherry-pick <commit-hash>`**
+    - Applies a specific commit from one branch onto another branch.
+
+44. **`git rebase <branch-name>`**
+    - Reapplies commits from the current branch onto another branch, often used to keep a feature branch up to date.
+
+45. **`git reflog`**
+    - Shows a log of all actions (like resets) that have been performed on the repository, helpful for recovering lost commits.
+
+46. **`git bisect`**
+    - Helps identify a specific commit that introduced a bug by performing a binary search between known good and bad commits.
+
+These commands cover the basics and some advanced features of Git, helping manage source code, collaborate with team members, and track project history effectively.
